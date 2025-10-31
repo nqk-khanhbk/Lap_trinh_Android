@@ -8,7 +8,6 @@
     android:padding="16dp"
     tools:context=".MainActivity">
 
-    <!-- FIRST ROW: Labels for First Name and Last Name -->
     <TextView
         android:id="@+id/tvFirstNameLabel"
         android:layout_width="0dp"
@@ -17,10 +16,8 @@
         android:textSize="14sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/tvLastNameLabel"
-        app:layout_constraintHorizontalWeight="1"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- FIRST ROW: EditTexts for First + Last (under the labels) -->
     <TextView
         android:id="@+id/tvLastNameLabel"
         android:layout_width="0dp"
@@ -28,10 +25,10 @@
         android:layout_marginStart="8dp"
         android:text="Last Name"
         android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontalWeight="1"
         app:layout_constraintStart_toEndOf="@id/tvFirstNameLabel"
-        app:layout_constraintTop_toTopOf="@id/tvFirstNameLabel" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvFirstNameLabel"
+        app:layout_constraintHorizontal_chainStyle="spread" />
 
     <EditText
         android:id="@+id/etFirstName"
@@ -43,7 +40,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/etLastName"
         app:layout_constraintTop_toBottomOf="@id/tvFirstNameLabel"
-        app:layout_constraintHorizontalWeight="1"
         android:layout_marginTop="4dp"/>
 
     <EditText
@@ -56,10 +52,9 @@
         app:layout_constraintStart_toEndOf="@id/etFirstName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvLastNameLabel"
-        app:layout_constraintHorizontalWeight="1"
+        app:layout_constraintHorizontal_chainStyle="spread"
         android:layout_marginStart="8dp"
         android:layout_marginTop="4dp"/>
-
     <!-- GENDER: label + radio buttons inline -->
 
     <TextView

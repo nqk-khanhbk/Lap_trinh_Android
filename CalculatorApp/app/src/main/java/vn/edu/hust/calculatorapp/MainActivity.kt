@@ -23,7 +23,6 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         // Đảm bảo bạn sử dụng đúng file layout
         setContentView(R.layout.activity_main_linear_layout)
 
-        // Sửa ID của TextView cho đúng với layout của bạn (nếu cần)
         // Trong layout bạn gửi, ID là tvDisplay
         textResult = findViewById(R.id.textView)
 
@@ -33,7 +32,6 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             R.id.btn5, R.id.btn6, R.id.btn7, R.id.btn8, R.id.btn9,
             R.id.btnAdd, R.id.btnSub, R.id.btnMul, R.id.btnDiv,
             R.id.btnBS, R.id.btnC, R.id.btnCE, R.id.btnEqual
-            // Thêm các nút khác nếu có, ví dụ: R.id.btnDot, R.id.btnSign
         )
 
         buttonIds.forEach { id ->

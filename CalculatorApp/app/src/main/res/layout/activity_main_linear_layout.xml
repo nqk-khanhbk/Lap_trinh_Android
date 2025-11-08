@@ -9,12 +9,14 @@
     tools:context=".MainActivity">
 
     <!-- Màn hình hiển thị kết quả -->
+
+    <!-- Hàng 1 -->
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="2"
         android:layout_margin="5dp"
+        android:layout_weight="2"
         android:background="#E1E1E1"
         android:gravity="end|center_vertical"
         android:padding="15dp"
@@ -22,7 +24,6 @@
         android:textColor="@color/black"
         android:textSize="50sp" />
 
-    <!-- Hàng 1 -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"

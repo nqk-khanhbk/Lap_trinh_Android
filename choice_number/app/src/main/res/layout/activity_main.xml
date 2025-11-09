@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/edtNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:hint="Nhập số nguyên"
+        android:padding="12dp"
+        android:textSize="18sp"/>
+
+    <!-- Thay vì đặt GridLayout là con của RadioGroup, ta dùng GridLayout độc lập.
+         Quản lý tính đồng bộ giữa các RadioButton bằng code. -->
+    <GridLayout
+        android:id="@+id/gridRadio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:rowCount="3"
+        android:layout_marginTop="12dp">
+
+        <RadioButton
+            android:id="@+id/rbLe"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="Số lẻ"
+            android:checked="true"/>
+
+        <RadioButton
+            android:id="@+id/rbChan"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="Số chẵn"/>
+
+        <RadioButton
+            android:id="@+id/rbNguyenTo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="Số nguyên tố"/>
+
+        <RadioButton
+            android:id="@+id/rbChinhPhuong"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="Số chính phương"/>
+
+        <RadioButton
+            android:id="@+id/rbHoanHao"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="Số hoàn hảo"/>
+
+        <RadioButton
+            android:id="@+id/rbFibo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="Số Fibonacci"/>
+
+    </GridLayout>
+
+    <TextView
+        android:id="@+id/tvMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Không có số nào thỏa mãn"
+        android:textAlignment="center"
+        android:visibility="gone"
+        android:textSize="16sp"
+        android:textColor="#880000"
+        android:layout_marginTop="8dp" />
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:dividerHeight="1dp"
+        android:layout_marginTop="8dp"/>
+
+</LinearLayout>

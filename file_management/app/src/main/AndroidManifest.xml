@@ -1,0 +1,31 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="vn.edu.hust.file_management"> <!-- SỬA: Thống nhất package name -->
+
+    <!-- Quyền cho Android 10 (API 29) trở xuống -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <!-- Quyền cho Android 11 (API 30) trở lên -->
+    <uses-permission
+        android:name="android.permission.MANAGE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+
+    <application
+        android:requestLegacyExternalStorage="true"
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.AppCompat.Light"> <!-- SỬA: Dùng theme có ActionBar -->
+
+        <activity android:name=".ImageViewerActivity" android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity android:name=".TextViewerActivity" android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+
+        <activity android:name=".MainActivity" android:exported="true"> <!-- SỬA: Thêm exported="true" -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+    </application>
+</manifest>
